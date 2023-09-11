@@ -1,0 +1,6 @@
+# .gitignore
+#
+# Author: José Carneiro <git@josevaltersilvacarneiro.net>
+# GPLv3
+
+sketch.sql
