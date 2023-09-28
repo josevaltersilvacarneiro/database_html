@@ -18,5 +18,9 @@
  */
 
 ALTER TABLE users DROP CHECK users_chk_3;
-
 ALTER TABLE users ADD CONSTRAINT users_chk_3 CHECK ( CHAR_LENGTH(hash) > 40 );
+
+ALTER TABLE requests DROP CHECK requests_chk_1;
+ALTER TABLE requests ADD CHECK ( CHAR_LENGTH(ip) BETWEEN 3 AND 39 );
+
+ALTER TABLE users DROP COLUMN salt;
